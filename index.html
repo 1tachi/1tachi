@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://1tachi.github.io/2019/03/27/Markdown-learn/">
+    <link itemprop="mainEntityOfPage" href="http://1tachi.github.io/2019/04/03/Google-Hack常用语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -251,7 +251,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/27/Markdown-learn/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2019/04/03/Google-Hack常用语法/" itemprop="url">Google Hack常用语法</a></h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T11:48:55+08:00">
-                2019-03-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-03T15:08:19+08:00">
+                2019-04-03
               </time>
             
 
@@ -303,7 +303,54 @@
       
         
           
-            
+            <p>##常用命令<br>inurl: 用于搜索网页上包含的URL. 这个语法对寻找网页上的搜索,帮助之类的很有用. </p>
+<p>intext: 只搜索网页部分中包含的文字(也就是忽略了标题,URL等的文字).</p>
+<p>site: 可以限制你搜索范围的域名. </p>
+<p>filetype: 搜索文件的后缀或者扩展名</p>
+<p>intitle: 限制你搜索的网页标题.</p>
+<p>allintitle: 搜索所有关键字构成标题的网页. 但是推荐不要使用</p>
+<p>link: 可以得到一个所有包含了某个指定URL的页面列表. 例如</p>
+<p>link:<a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a> 就可以得到所有连接到Google的页面</p>
+<p>##intext:管理<br>filetype:mdb</p>
+<p>inurl:file</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> filetype:txt 查找TXT文件 其他的依次内推</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> intext:管理</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> inurl:login</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> intitle:后台</p>
+<p>##查看服务器使用的程序</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> filetype:asp</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> filetype:php</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> filetype:jsp</p>
+<p>##查看上传漏洞：<br>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> inurl:file</p>
+<p>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> inurl:load</p>
+<p>##查找注射点：<br>site:<a href="http://xx.com" target="_blank" rel="noopener">http://xx.com</a> filetype:asp </p>
+<blockquote>
+<p>site:tw inurl:asp?id= 这个是找台湾的或</p>
+<p>site:jp inurl:asp?id= 这个是找日本的 </p>
+<p>site:ko inurl:asp?id= 这个是找韩国的</p>
+</blockquote>
+<p>###eg:</p>
+<blockquote>
+<p>intitle:旁注- 网站xxxfiletype:asp</p>
+</blockquote>
+<blockquote>
+<p>inurl:editor/db/</p>
+</blockquote>
+<blockquote>
+<p>inurl:eWebEditor/db/</p>
+</blockquote>
+<blockquote>
+<p>inurl:bbs/data/</p>
+</blockquote>
+<blockquote>
+<p>inurl:databackup/</p>
+<p>inurl:blog/data/</p>
+<p>inurl:\boke\data</p>
+<p>inurl:bbs/database/</p>
+<p>inurl:conn.asp</p>
+<p>inc/conn.asp</p>
+</blockquote>
+
           
         
       
@@ -594,134 +641,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://1tachi.github.io/2019/03/26/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Itachi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/26/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-26T18:53:07+08:00">
-                2019-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -768,7 +687,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -781,7 +700,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
