@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="信息收集,">
+  <meta name="keywords" content="SQL,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="场景：护网演习、大范围目标渗透 思路收集 google，fofa，zoomeye搜索页面特征（备案、电话、机构等等）找相关站点。（避免根域搜集不全的情况） wooyun历史漏洞库搜相关业务站点（避免根域搜集不全的情况） 找二级域(SubDomainscanner)/c段/子域名 确定真实IP/旁注 以真实IP，robtex找同网段或C段（webfind/ipscan24）（有些业务没有域名） Gi">
-<meta name="keywords" content="信息收集">
+<meta name="description" content="编码空格是%20， 单引号是%27  井号是%23 双引号是%22 判断sql注入显错和基于错误的盲注： 单引号，and 1=1  和and 1=2，双引号，反斜杠，注释等 基于时间的盲注： 加个sleep函数 ，如sleep(5) (函数不同数据库有所不同)例子：   ‘ and sleep(5)    “ and sleep(5)">
+<meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于大范围踩点的一些思路收集“">
-<meta property="og:url" content="http://1tachi.github.io/2019/04/08/关于大范围踩点的一些思路收集“/index.html">
+<meta property="og:title" content="sql_inject_note">
+<meta property="og:url" content="http://1tachi.github.io/2019/04/03/sql_inject_note/index.html">
 <meta property="og:site_name" content="Itachi Blog">
-<meta property="og:description" content="场景：护网演习、大范围目标渗透 思路收集 google，fofa，zoomeye搜索页面特征（备案、电话、机构等等）找相关站点。（避免根域搜集不全的情况） wooyun历史漏洞库搜相关业务站点（避免根域搜集不全的情况） 找二级域(SubDomainscanner)/c段/子域名 确定真实IP/旁注 以真实IP，robtex找同网段或C段（webfind/ipscan24）（有些业务没有域名） Gi">
+<meta property="og:description" content="编码空格是%20， 单引号是%27  井号是%23 双引号是%22 判断sql注入显错和基于错误的盲注： 单引号，and 1=1  和and 1=2，双引号，反斜杠，注释等 基于时间的盲注： 加个sleep函数 ，如sleep(5) (函数不同数据库有所不同)例子：   ‘ and sleep(5)    “ and sleep(5)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-08T12:56:48.555Z">
+<meta property="og:updated_time" content="2019-04-11T13:19:51.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于大范围踩点的一些思路收集“">
-<meta name="twitter:description" content="场景：护网演习、大范围目标渗透 思路收集 google，fofa，zoomeye搜索页面特征（备案、电话、机构等等）找相关站点。（避免根域搜集不全的情况） wooyun历史漏洞库搜相关业务站点（避免根域搜集不全的情况） 找二级域(SubDomainscanner)/c段/子域名 确定真实IP/旁注 以真实IP，robtex找同网段或C段（webfind/ipscan24）（有些业务没有域名） Gi">
+<meta name="twitter:title" content="sql_inject_note">
+<meta name="twitter:description" content="编码空格是%20， 单引号是%27  井号是%23 双引号是%22 判断sql注入显错和基于错误的盲注： 单引号，and 1=1  和and 1=2，双引号，反斜杠，注释等 基于时间的盲注： 加个sleep函数 ，如sleep(5) (函数不同数据库有所不同)例子：   ‘ and sleep(5)    “ and sleep(5)">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://1tachi.github.io/2019/04/08/关于大范围踩点的一些思路收集“/">
+  <link rel="canonical" href="http://1tachi.github.io/2019/04/03/sql_inject_note/">
 
 
 
 
 
-  <title>关于大范围踩点的一些思路收集“ | Itachi Blog</title>
+  <title>sql_inject_note | Itachi Blog</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://1tachi.github.io/2019/04/08/关于大范围踩点的一些思路收集“/">
+    <link itemprop="mainEntityOfPage" href="http://1tachi.github.io/2019/04/03/sql_inject_note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于大范围踩点的一些思路收集“</h1>
+          <h1 class="post-title" itemprop="name headline">sql_inject_note</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T15:45:16+08:00">
-                2019-04-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-03T20:37:04+08:00">
+                2019-04-03
               </time>
             
 
@@ -300,15 +300,14 @@
       
 
       
-        <p>场景：护网演习、大范围目标渗透</p>
-<h3 id="思路收集"><a href="#思路收集" class="headerlink" title="思路收集"></a>思路收集</h3><ol>
-<li>google，fofa，zoomeye搜索页面特征（备案、电话、机构等等）找相关站点。（避免根域搜集不全的情况）</li>
-<li>wooyun历史漏洞库搜相关业务站点（避免根域搜集不全的情况）</li>
-<li>找二级域(SubDomainscanner)/c段/子域名</li>
-<li>确定真实IP/旁注</li>
-<li>以真实IP，robtex找同网段或C段（webfind/ipscan24）（有些业务没有域名）</li>
-<li>Github</li>
-</ol>
+        <h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>空格是%20，</p>
+<p>单引号是%27</p>
+<p> 井号是%23</p>
+<p>双引号是%22</p>
+<h3 id="判断sql注入"><a href="#判断sql注入" class="headerlink" title="判断sql注入"></a>判断sql注入</h3><p><code>显错和基于错误的盲注：</code></p>
+<p>单引号，and 1=1  和and 1=2，双引号，反斜杠，注释等</p>
+<p><code>基于时间的盲注：</code></p>
+<p>加个sleep函数 ，如sleep(5) (函数不同数据库有所不同)例子：   ‘ and sleep(5)    “ and sleep(5)</p>
 
       
     </div>
@@ -326,7 +325,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/信息收集/" rel="tag"># 信息收集</a>
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
           
         </div>
       
@@ -349,8 +348,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/09/sql_inject_note/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/08/关于大范围踩点的一些思路收集/" rel="prev" title="关于大范围踩点的一些思路收集“">
+                关于大范围踩点的一些思路收集“ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -441,7 +440,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -474,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路收集"><span class="nav-number">1.</span> <span class="nav-text">思路收集</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">1.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断sql注入"><span class="nav-number">2.</span> <span class="nav-text">判断sql注入</span></a></li></ol></div>
             
 
           </div>
